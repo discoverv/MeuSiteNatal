@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Painel de Administração 🎄</h1>
+        <div id="loginContainer" class="form-container">
+            <input type="password" id="senhaInput" placeholder="Digite a senha">
+            <button onclick="entrarPainel()" class="action-btn">Entrar</button>
+            <p id="loginMensagem" class="feedback-msg"></p>
+        </div>
+        
+        <div id="painelContainer" style="display: none;" class="panel">
+            <h2>Bem-vindo, Cristiana! (ID: 105)</h2>
+            <div class="action-section">
+                <button onclick="mostrarReembolso()" class="action-btn">Reembolso de Compra</button>
+                <p id="reembolsoMensagem" class="feedback-msg"></p>
+                <div id="reembolsoForm" style="display: none;">
+                    <input type="text" id="idCompraInput" placeholder="Digite o ID da compra">
+                    <button onclick="processarReembolso()" class="action-btn">Enviar Reembolso</button>
+                </div>
+            </div>
+            <div class="action-section">
+                <button onclick="mostrarApoio()" class="action-btn">Apoio Técnico</button>
+                <p id="apoioMensagem" class="feedback-msg"></p>
+                <div id="apoioForm" style="display: none;">
+                    <input type="text" id="nickUsuarioInput" placeholder="Digite seu nick">
+                    <input type="text" id="motivoInput" placeholder="Digite o motivo">
+                    <button onclick="processarApoio()" class="action-btn">Solicitar Apoio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Estilo Geral */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-image: url('https://st3.depositphotos.com/1010735/12797/v/950/depositphotos_127979186-stock-illustration-new-year-background-with-christmas.jpg');
+    background-size: cover;  /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Não repete a imagem */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 0, 0, 0.7);  /* Fundo vermelho semi-transparente */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s ease forwards;
+}
+
+h1 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+h2 {
+    color: #ffcc00;
+}
+
+.form-container {
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    width: 280px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    margin-bottom: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px #ffcc00;
+    outline: none;
+}
+
+.action-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn:hover {
+    background-color: #ffdd33;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+.feedback-msg {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.feedback-msg.success {
+    color: #4CAF50;
+}
+
+.feedback-msg.error {
+    color: #FF6347;
+}
+
+.panel {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.action-section {
+    margin: 20px 0;
+}
+
+/* Animações */
+@keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
